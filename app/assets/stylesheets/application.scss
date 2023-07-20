@@ -5,11 +5,17 @@
     border:1px solid red !important;
     outline:1px solid red !important;
 }
+
 //form fields
+
 .ui.form input{
     padding-left:2em !important;
     padding-right: 2em !important;
 }
+.login-signup-form{
+    opacity: 1;
+}
+
 //  chartoom index style
 
 .ui.menu:first-child {
