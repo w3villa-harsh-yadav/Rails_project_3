@@ -1,0 +1,9 @@
+      <% if (message.user != current_user) %>
+        <div class="msg " id='right-msg'>
+          <%= render 'message_card',message: message %>
+        </div>
+      <% else %>
+        <div class="msg " id="left-msg">
+          <%= render 'message_card',message: message %>
+        </div>
+       <% end %>

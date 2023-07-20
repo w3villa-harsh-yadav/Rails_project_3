@@ -1,0 +1,32 @@
+
+<div class="ui msg-container" >
+
+  <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fas fa-comment-alt"></i> Messages
+      </div>
+      <div class="msger-header-options">
+        <span><i class="fas fa-cog"></i></span>
+      </div>
+    </header>
+    <main class="msger-chat" id='chat-room'>
+      <% @messages.each do |message| %>
+        <%= render 'message' ,message: message %>
+      <% end %>
+    </main>
+    <%= form_with scope: :message ,url: messages_path ,local: false,class:"msger-inputarea",id:"message-form" do |f|%>
+        <%= f.text_field  :body,class:"msger-input",placeholder:"Enter your message..."%>
+        <%= f.submit "Send" ,class:"msger-send-btn" %>
+    <% end %>
+  </section>
+
+  <div class = "right-container">
+      <div class="right-side-btn">
+          <a href="#">Messages</a>
+      </div>
+      <div class="right-side-btn">
+          <a href="#">Friends</a>
+      </div>
+  </div>
+</div>

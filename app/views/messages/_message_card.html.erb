@@ -1,0 +1,13 @@
+          <div class="msg-img" id="msg-img"></div>
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name"><%= message.user.user_name.capitalize %></div>
+              <div class="msg-info-time">
+                <%= message.created_at.strftime("%m/%d/%Y  ") %>
+                <%= message.created_at.strftime(" %I:%M%p") %>
+              </div>
+            </div>
+            <div class="msg-text">
+              <%= message.body %>
+            </div>
+          </div>

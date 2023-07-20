@@ -1,0 +1,31 @@
+<div class="ui inverted small menu">
+    <div class="ui container">
+         <a class="active item" href="/">
+            Chat Room
+        </a>
+        <a class="item">
+            Messages
+        </a>
+        <div class="right menu">
+            <div class="ui dropdown item">
+                <% if logged_in? %>
+                   <div id='current-user'><%= current_user.user_name.capitalize %></div>
+                <% else %>
+                    Account
+                <% end %>
+             <i class="dropdown icon"></i>
+            <div class="menu">
+                <% if logged_in? %>
+                     <%= link_to 'Log Out', logout_path,method: :delete ,class:"item" %>
+                <% else %>
+                <%= link_to 'Login', login_path ,class:"item" %>
+                <%end%>
+                <%= link_to 'SignUp', new_user_path ,class:"item" %>
+            </div>
+            </div>
+            <div class="item">
+                <%= link_to 'SignUp', new_user_path ,class:"ui blue button" %>
+             </div>
+        </div>
+  </div>
+</div>
