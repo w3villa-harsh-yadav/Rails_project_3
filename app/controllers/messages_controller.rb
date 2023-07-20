@@ -18,7 +18,8 @@ class MessagesController < ApplicationController
     private
 
     def message_render(message)
-      render(partial: "message",locals:{message: message} )
+      redirect_to root_path
+      # render(partial: "message",locals:{message: message} )
     end
 
 end
